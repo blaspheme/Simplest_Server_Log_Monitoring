@@ -11,7 +11,4 @@
 * 不使用 `supervisord` 管理进程，只是因为他基于python，不想安装多编程语言，保持镜像足够轻量，所以需要前台直接执行 Nginx
 * `nginx-lua` 非官方实现，需要依赖更多的库，故放弃
 
-最终选择apache服务器+lua
-
-\
-    && a2enmod lua
+最终选择 `openresty` 这个 Nginx 增强实现
