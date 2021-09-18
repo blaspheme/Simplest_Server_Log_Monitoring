@@ -22,7 +22,7 @@ function module.index() -- 首页函数
     end
 end
 
-function module.docker_logs(n, container_id)
+function module.docker_logs(n, container_id) -- docker logs
     local docker_logs = io.popen(string.format([[/usr/local/bin/docker logs -n %s %s]], n, container_id))
     local line = docker_logs:read()
     while line do
